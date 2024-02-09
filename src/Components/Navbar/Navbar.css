@@ -5,19 +5,19 @@
     color: var(--text-200);
     display: flex;
     flex-wrap: wrap;
+    border-right: 1px solid var(--primary-100);
 }
 
-.Nav-bar-container{
-    padding: 0;
+.Nav-bar-container > h2{
     padding-top: 50px;
     padding-left: 40px;
+    padding-bottom: 0;
 }
 
 .Navbar-buttons-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: red; */
 }
 
 .nav-button{
@@ -26,4 +26,10 @@
     padding: 10px 100px;
     margin: 10px;
     font-size: 1.2rem;
+    cursor:pointer;
+}
+
+.nav-button:hover{
+    background: linear-gradient(90deg , var(--primary-100) , var(--primary-200) 50%);
+    border-radius: 12px;
 }
