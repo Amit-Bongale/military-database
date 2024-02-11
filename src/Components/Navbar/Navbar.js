@@ -6,11 +6,29 @@ import arrow from '../../Assets/Icons/downward-arrow (1).png'
 
 function Navbar(){
 
-  let [IsdropdownOpen , setIsdropdownOpen] = useState(false)
+  let [IsdropdownOpendetail , setIsdropdownOpendetail] = useState(false)
+  let [IsdropdownOpeninsert , setIsdropdownOpeninsert] = useState(false)
+  let [IsdropdownOpenupdate , setIsdropdownOpenupdate] = useState(false)
+  let [IsdropdownOpendelete , setIsdropdownOpendelete] = useState(false)
   let [rotation , setrotation] = useState(0);
 
-  const handleopen = () => {
-    setIsdropdownOpen(!IsdropdownOpen);
+  const handleopendetail = () => {
+    setIsdropdownOpendetail(!IsdropdownOpendetail);
+    setrotation(rotation+180);
+  }
+
+  const handleopeninsert = () => {
+    setIsdropdownOpeninsert(!IsdropdownOpeninsert);
+    setrotation(rotation+180);
+  }
+
+  const handleopenupdate = () => {
+    setIsdropdownOpenupdate(!IsdropdownOpenupdate);
+    setrotation(rotation+180);
+  }
+
+  const handleopendelete = () => {
+    setIsdropdownOpendelete(!IsdropdownOpendelete);
     setrotation(rotation+180);
   }
 
@@ -19,24 +37,63 @@ function Navbar(){
 
       <div className='Navbar-buttons-container'>
         <h2>Military Databse</h2>
-        <Link to='/details'> <button className='nav-button'>Details</button></Link>
-     
-       
-        <button className='nav-button' onClick={() => { handleopen() }}>Insert 
+      </div>
+
+        <button className='nav-button' onClick={() => { handleopendetail() }}>Details
         <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation}deg`}}></img>
         </button>
-        { IsdropdownOpen && (
+        { IsdropdownOpendetail && (
+            <div className='nav-subbutton-container' >
+              <Link to='/details'> <button className='nav-button'>Soldier</button></Link>
+              <button  className='nav-button'>Department</button>
+              <button className='nav-button'>Posting</button>
+              <button  className='nav-button'>Operation</button>
+              <button className='nav-button'>Weapon</button>
+              <button className='nav-button'>Location</button>
+            </div>
+        )}
+       
+        <button className='nav-button' onClick={() => { handleopeninsert() }}>Insert 
+        <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation}deg`}}></img>
+        </button>
+        { IsdropdownOpeninsert && (
           <div className='nav-subbutton-container' >
             <Link to='/insert'> <button  className='nav-button'>Soldier</button> </Link>
             <button  className='nav-button'>Department</button>
+            <button className='nav-button'>Posting</button>
             <button  className='nav-button'>Operation</button>
+            <button className='nav-button'>Weapon</button>
+            <button className='nav-button'>Location</button>
           </div>
         )}
 
+        <button className='nav-button' onClick={() => { handleopenupdate() }}>Update
+        <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation}deg`}}></img>
+        </button>
+        { IsdropdownOpenupdate && (
+          <div className='nav-subbutton-container' >
+            <Link to='/update'> <button className='nav-button'>Soldier</button></Link>
+            <button  className='nav-button'>Department</button>
+            <button className='nav-button'>Posting</button>
+            <button  className='nav-button'>Operation</button>
+            <button className='nav-button'>Weapon</button>
+            <button className='nav-button'>Location</button>
+          </div>
+        )}
 
-        <Link to='/update'> <button className='nav-button'>Update</button></Link>
-        <Link to='/update'> <button className='nav-button'>Delete</button></Link>
-      </div>
+        <button className='nav-button' onClick={() => { handleopendelete() }}>Delete 
+        <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation}deg`}}></img>
+        </button>
+        { IsdropdownOpendelete && (
+          <div className='nav-subbutton-container' >
+            <Link to='/update'> <button className='nav-button'>Soldier</button></Link>
+            <button  className='nav-button'>Department</button>
+            <button className='nav-button'>Posting</button>
+            <button  className='nav-button'>Operation</button>
+            <button className='nav-button'>Weapon</button>
+            <button className='nav-button'>Location</button>
+          </div>
+        )}
 
     </div>
   )
