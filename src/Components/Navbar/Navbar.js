@@ -13,17 +13,23 @@ function Navbar(){
   let [rotation , setrotation] = useState(0);
 
   const handleopendetail = () => {
-    setIsdropdownOpendetail(!IsdropdownOpendetail);
+    setIsdropdownOpendetail(!IsdropdownOpeninsert);
+    setIsdropdownOpendetail(!IsdropdownOpenupdate);
+    setIsdropdownOpendetail(!IsdropdownOpendelete);
     setrotation(rotation+180);
   }
 
   const handleopeninsert = () => {
-    setIsdropdownOpeninsert(!IsdropdownOpeninsert);
+    setIsdropdownOpeninsert(!IsdropdownOpendetail);
+    setIsdropdownOpendetail(!IsdropdownOpenupdate);
+    setIsdropdownOpendetail(!IsdropdownOpendelete);
     setrotation(rotation+180);
   }
 
   const handleopenupdate = () => {
-    setIsdropdownOpenupdate(!IsdropdownOpenupdate);
+    setIsdropdownOpeninsert(!IsdropdownOpendetail);
+    setIsdropdownOpenupdate(!IsdropdownOpeninsert);
+    setIsdropdownOpendetail(!IsdropdownOpendelete);
     setrotation(rotation+180);
   }
 
