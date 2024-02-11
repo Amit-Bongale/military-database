@@ -13,28 +13,34 @@ function Navbar(){
   let [rotation , setrotation] = useState(0);
 
   const handleopendetail = () => {
-    setIsdropdownOpendetail(!IsdropdownOpeninsert);
-    setIsdropdownOpendetail(!IsdropdownOpenupdate);
-    setIsdropdownOpendetail(!IsdropdownOpendelete);
+    setIsdropdownOpendetail(!IsdropdownOpendetail);
+    setIsdropdownOpenupdate(IsdropdownOpenupdate(false));
+    setIsdropdownOpeninsert(IsdropdownOpeninsert(false));
+    setIsdropdownOpendelete(IsdropdownOpendelete(false));
     setrotation(rotation+180);
   }
 
   const handleopeninsert = () => {
-    setIsdropdownOpeninsert(!IsdropdownOpendetail);
-    setIsdropdownOpendetail(!IsdropdownOpenupdate);
-    setIsdropdownOpendetail(!IsdropdownOpendelete);
+    setIsdropdownOpeninsert(!IsdropdownOpeninsert);
+    setIsdropdownOpendetail(IsdropdownOpendetail(false));
+    setIsdropdownOpenupdate(IsdropdownOpenupdate(false));
+    setIsdropdownOpendelete(IsdropdownOpendelete(false));
     setrotation(rotation+180);
   }
 
   const handleopenupdate = () => {
-    setIsdropdownOpeninsert(!IsdropdownOpendetail);
-    setIsdropdownOpenupdate(!IsdropdownOpeninsert);
-    setIsdropdownOpendetail(!IsdropdownOpendelete);
+    setIsdropdownOpenupdate(!IsdropdownOpenupdate);
+    setIsdropdownOpendetail(IsdropdownOpendetail(false));
+    setIsdropdownOpeninsert(!IsdropdownOpeninsert(false));
+    setIsdropdownOpendelete(IsdropdownOpendelete(false));
     setrotation(rotation+180);
   }
 
   const handleopendelete = () => {
     setIsdropdownOpendelete(!IsdropdownOpendelete);
+    setIsdropdownOpendetail(IsdropdownOpendetail(false));
+    setIsdropdownOpeninsert(!IsdropdownOpeninsert(false));
+    setIsdropdownOpenupdate(IsdropdownOpenupdate(false));
     setrotation(rotation+180);
   }
 
