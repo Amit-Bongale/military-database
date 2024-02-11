@@ -8,28 +8,38 @@
     border-right: 1px solid var(--primary-100);
 }
 
-.Nav-bar-container > h2{
+.Navbar-buttons-container > h2{
     padding-top: 50px;
     padding-left: 40px;
-    padding-bottom: 0;
+    padding-bottom: 40px;
 }
 
 .Navbar-buttons-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
 }
 
 .nav-button{
     background-color: transparent;
     border: 0;
-    padding: 10px 100px;
+    padding: 10px 80px;
     margin: 10px;
     font-size: 1.2rem;
     cursor:pointer;
 }
 
+.nav-button > img {
+    margin-top: 5px;
+    padding: 0px 15px 0px 15px;
+    position: relative;
+}
+
 .nav-button:hover{
     background: linear-gradient(90deg , var(--primary-100) , var(--primary-200) 50%);
     border-radius: 12px;
+}
+
+.nav-subbutton-container{
+    background-color: var(--bg-300);
 }
