@@ -14,33 +14,33 @@ function Navbar(){
 
   const handleopendetail = () => {
     setIsdropdownOpendetail(!IsdropdownOpendetail);
-    setIsdropdownOpenupdate(IsdropdownOpenupdate(false));
-    setIsdropdownOpeninsert(IsdropdownOpeninsert(false));
-    setIsdropdownOpendelete(IsdropdownOpendelete(false));
+    setIsdropdownOpenupdate(false);
+    setIsdropdownOpeninsert(false);
+    setIsdropdownOpendelete(false);
     setrotation(rotation+180);
   }
 
   const handleopeninsert = () => {
     setIsdropdownOpeninsert(!IsdropdownOpeninsert);
-    setIsdropdownOpendetail(IsdropdownOpendetail(false));
-    setIsdropdownOpenupdate(IsdropdownOpenupdate(false));
-    setIsdropdownOpendelete(IsdropdownOpendelete(false));
+    setIsdropdownOpendetail(false);
+    setIsdropdownOpenupdate(false);
+    setIsdropdownOpendelete(false);
     setrotation(rotation+180);
   }
 
   const handleopenupdate = () => {
     setIsdropdownOpenupdate(!IsdropdownOpenupdate);
-    setIsdropdownOpendetail(IsdropdownOpendetail(false));
-    setIsdropdownOpeninsert(!IsdropdownOpeninsert(false));
-    setIsdropdownOpendelete(IsdropdownOpendelete(false));
+    setIsdropdownOpendetail(false);
+    setIsdropdownOpeninsert(false);
+    setIsdropdownOpendelete(false);
     setrotation(rotation+180);
   }
 
   const handleopendelete = () => {
     setIsdropdownOpendelete(!IsdropdownOpendelete);
-    setIsdropdownOpendetail(IsdropdownOpendetail(false));
-    setIsdropdownOpeninsert(!IsdropdownOpeninsert(false));
-    setIsdropdownOpenupdate(IsdropdownOpenupdate(false));
+    setIsdropdownOpendetail(false);
+    setIsdropdownOpeninsert(false);
+    setIsdropdownOpenupdate(false);
     setrotation(rotation+180);
   }
 
