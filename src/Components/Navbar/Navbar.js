@@ -57,7 +57,7 @@ function Navbar(){
   }
 
   const imgrotate = () => {
-    setrotation1(180);
+    setrotation1(rotation1+180);
   }
 
   const imgrotate2 = () => {
@@ -76,7 +76,7 @@ function Navbar(){
       <div>
 
         <div className='Navbar-buttons-container'>
-          <h2>Military DataBase</h2>
+          <h2>Military Dataase</h2>
         </div>
 
         <div>
