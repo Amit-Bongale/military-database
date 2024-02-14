@@ -1,7 +1,7 @@
 .Nav-bar-container{
     background-color: var(--bg-200);
     width: 300px;
-    height: 100vh;
+    min-height: 100vh;
     color: var(--text-200);
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +20,22 @@
     /* align-items: center; */
 }
 
+.nav-main-button{
+    background-color: transparent;
+    border: 0;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 1.2rem;
+    cursor:pointer;
+    height: 50px;
+    width:280px
+}
+
+.nav-main-button:hover{
+    background: linear-gradient(90deg , var(--primary-100) , var(--primary-200) 50%);
+    border-radius: 12px;
+}
+
 .nav-button{
     background-color: transparent;
     border: 0;
@@ -27,11 +43,12 @@
     margin: 10px;
     font-size: 1.2rem;
     cursor:pointer;
+    width:280px;
 }
 
-.nav-button > img {
+.nav-main-button > img {
     margin-top: 5px;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 25px 0px 25px;
     position: relative;
 }
 
