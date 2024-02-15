@@ -1,0 +1,20 @@
+.details-container{
+    position: relative;
+    left: 50px;
+    padding: 40px 60px;
+}
+
+.details-table {
+    border-collapse: collapse;
+    width: 180%;
+}
+  
+.details-table-data , .details-table-header {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+.deatils-table-row:nth-child(even) {
+    background-color:  var(--primary-100)
+}
