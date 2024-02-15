@@ -76,7 +76,7 @@ function Navbar(){
       <div>
 
         <div className='Navbar-buttons-container'>
-          <h2>Military Dataase</h2>
+          <h2>Military Database</h2>
         </div>
 
         <div>
