@@ -86,11 +86,11 @@ function Navbar(){
           </button>
           { IsdropdownOpendetail && (
               <div className='nav-subbutton-container' >
-                <Link to='/details'> <button className='nav-button'>Soldier</button></Link>
-                <button  className='nav-button'>Department</button>
-                <button className='nav-button'>Posting</button>
-                <button  className='nav-button'>Operation</button>
-                <button className='nav-button'>Medals</button>
+                <Link to='/soldierdetails'> <button className='nav-button'>Soldier</button></Link>
+                <Link to='/deptartmentdetails'><button  className='nav-button'>Department</button> </Link>
+                <Link to='/postingdetails'><button className='nav-button'>Posting</button></Link>
+                <Link to='/operationdetails'><button  className='nav-button'>Operation</button></Link>
+                <Link to='/medaldetails'><button className='nav-button'>Medals</button></Link>
               </div>  
           )}
           
@@ -99,11 +99,11 @@ function Navbar(){
           </button>
           { IsdropdownOpeninsert && (
             <div className='nav-subbutton-container' >
-              <Link to='/insert'> <button  className='nav-button'>Soldier</button> </Link>
-              <button  className='nav-button'>Department</button>
-              <button className='nav-button'>Posting</button>
-              <button  className='nav-button'>Operation</button>
-              <button className='nav-button'>Medals</button>
+              <Link to='/insertsoldier'> <button  className='nav-button'>Soldier</button> </Link>
+              <Link to='/insertdepartment'><button  className='nav-button'>Department</button></Link>
+              <Link to='/insertposting'><button className='nav-button'>Posting</button></Link>
+              <Link to='/insertoperation'><button  className='nav-button'>Operation</button></Link>
+              <Link to='/insertmedal'><button className='nav-button'>Medals</button></Link>
             </div>
           )}
 
@@ -112,11 +112,11 @@ function Navbar(){
           </button>
           { IsdropdownOpenupdate && (
             <div className='nav-subbutton-container' >
-              <Link to='/update'> <button className='nav-button'>Soldier</button></Link>
-              <button  className='nav-button'>Department</button>
-              <button className='nav-button'>Posting</button>
-              <button  className='nav-button'>Operation</button>
-              <button className='nav-button'>Medals</button>
+              <Link to='/updatesoldier'> <button className='nav-button'>Soldier</button></Link>
+              <Link to='/updateDepartment'><button  className='nav-button'>Department</button></Link>
+              <Link to='/updateposting'><button className='nav-button'>Posting</button></Link>
+              <Link to='/updatesoperation'><button  className='nav-button'>Operation</button></Link>
+              <Link to='/updatemedal'> <button className='nav-button'>Medals</button></Link>
             </div>
           )}
 
@@ -125,11 +125,11 @@ function Navbar(){
           </button>
           { IsdropdownOpendelete && (
             <div className='nav-subbutton-container' >
-              <Link to='/update'> <button className='nav-button'>Soldier</button></Link>
-              <button  className='nav-button'>Department</button>
-              <button className='nav-button'>Posting</button>
-              <button  className='nav-button'>Operation</button>
-              <button className='nav-button'>Medals</button>
+              <Link to='/deletesoldier'> <button className='nav-button'>Soldier</button></Link>
+              <Link to='/deletedepartment'><button  className='nav-button'>Department</button></Link>
+              <Link to='/deleteposting'><button className='nav-button'>Posting</button></Link>
+              <Link to='/deleteoperation'><button  className='nav-button'>Operation</button></Link>
+              <Link to='/deletemedal'> <button className='nav-button'>Medals</button></Link>
             </div>
           )}
             
