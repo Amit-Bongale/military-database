@@ -21,12 +21,12 @@ function InsertSoldier() {
       'dob' : dob,
       'gender':gender,
       'address':address,
-      'salary':salary
+      'Salary':salary
     }
 
 
     try{
-      fetch(`http://localhost:3000/insertsoldier` ,
+      fetch(`http://localhost:3000/insertsoldiers` ,
       { method : "POST" , headers:{'Content-Type': 'application/json'} ,  body:JSON.stringify(data)})
       .then((res) => res.json())
       .catch((error) => console.log(error));
@@ -74,7 +74,7 @@ function InsertSoldier() {
                 <label className="insert-label">Date of Birth</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
+                <input className="insert-input" type="date" required
                 onChange={(val) => {setdob(val.target.value)}}/>
               </td>
             </tr>
