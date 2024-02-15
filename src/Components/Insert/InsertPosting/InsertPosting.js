@@ -15,11 +15,11 @@ function InsertPosting() {
   function send(){
 
     let data = {
-      'post_id' : postid,
-      'start_date' : startdate,
-      'end_date': enddate,
+      'post_id' : post_id,
+      'start_date' : start_date,
+      'end_date': end_date,
       'location': location,
-      'soldier_id' : soldierid,
+      'soldier_id' : soldier_id,
 
     }
 
@@ -63,7 +63,7 @@ function InsertPosting() {
                 <label className="insert-label">Start_Date</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
+                <input className="insert-input" type="date" required
                 onChange={(val) => {setstart_date(val.target.value)}}/>
               </td>
             </tr>
@@ -73,7 +73,7 @@ function InsertPosting() {
                 <label className="insert-label">End_Date</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
+                <input className="insert-input" type="date" required
                 onChange={(val) => {setend_date(val.target.value)}}/>
               </td>
             </tr>
