@@ -31,6 +31,8 @@ function InsertMedals() {
     catch (error) {
       console.log("error :", error)
     }
+
+    window.location.reload();
   }
 
 

@@ -19,15 +19,9 @@ function InsertSoldier() {
       'soldier_id' : soldier_id,
       'name' : name,
       'dob' : dob,
-<<<<<<< HEAD
       'gender':gender,
       'address':address,
-      'Salary':salary
-=======
-      'gender': gender,
-      'address': address,
-      'salary': salary
->>>>>>> 4893ff84dafd66897812167de8812b71aa2221a8
+      'salary':salary
     }
 
 
@@ -42,6 +36,8 @@ function InsertSoldier() {
     catch (error) {
       console.log("error :", error)
     }
+
+    window.location.reload();
   }
 
 

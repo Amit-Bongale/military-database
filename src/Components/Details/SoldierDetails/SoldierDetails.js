@@ -61,7 +61,7 @@ function SoldierDetails() {
                           {elem.address}
                       </td>
                       <td className="details-table-data">
-                          {elem.Salary}
+                          {elem.salary}
                       </td>
                       
                     </tr>

@@ -35,6 +35,8 @@ function InsertPosting() {
     catch (error) {
       console.log("error :", error)
     }
+
+    window.location.reload();
   }
 
 

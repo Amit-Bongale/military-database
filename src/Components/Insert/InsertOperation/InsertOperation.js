@@ -37,6 +37,8 @@ function InsertOperation() {
     catch (error) {
       console.log("error :", error)
     }
+
+    window.location.reload();
   }
 
 

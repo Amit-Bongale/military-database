@@ -1,0 +1,38 @@
+.details-container{
+    position: relative;
+    left: 50px;
+    padding: 40px 60px;
+}
+
+.details-table {
+    border-collapse: collapse;
+    width: 160%;
+}
+  
+.details-table-data , .details-table-header {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+.deatils-table-row:nth-child(even) {
+    background-color:  var(--primary-100)
+}
+
+.deletebutton{
+    background: linear-gradient(90deg ,rgb(255, 30, 0) ,rgb(255, 55, 0) 90%);
+    padding: 14px 34px;
+    border-radius: 10px;
+    border: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+    margin-left: 0px;
+}
+
+.deletebutton:hover{
+    box-shadow: 0px 0px 20px rgb(249, 88, 52);
+    scale: 1.05;
+}

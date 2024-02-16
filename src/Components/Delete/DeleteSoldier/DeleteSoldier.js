@@ -1,11 +1,11 @@
 import { useEffect , useState } from "react";
 
+import '../Delete.css'
 
 function DeleteSoldier() {
   
   let [Soldierdata , setsoldierdata] = useState([])
-
-  let [id, setid] = useState('')
+  let [deletesoldier , setdeleted] = useState('')
 
   useEffect(() => {
     try {
@@ -20,13 +20,14 @@ function DeleteSoldier() {
       });
     }
     catch (error) {
-        console.error('Error:', error);
+      console.error('Error:', error);
     }
-  },[])
+  },[deletesoldier])
 
-  function deletedata(){
+  function deletedata(id){
 
     console.log(id)
+    setdeleted(id);
 
     let bodyData = { 
       "soldier_id":id
@@ -35,21 +36,22 @@ function DeleteSoldier() {
     try {
       fetch('http://localhost:3000/deletesoldier',
       { 
-          method: "POST" ,
-          body:JSON.stringify(bodyData),
-          headers: {'Content-Type': 'application/json'}
+        method: "POST" ,
+        body:JSON.stringify(bodyData),
+        headers: {'Content-Type': 'application/json'}
       })
       .then((res) => res.json())
       .catch(error => {
-          console.log('Error fetching data:', error);
+        console.log('Error fetching data:', error);
       });
 
       alert('Soldier Deleted Sucessfully');
 
-  }
-  catch (error) {
-    console.error('Error:', error);
-  }
+    }
+    catch (error) {
+      console.error('Error:', error);
+    }
+
   }
 
   return (
@@ -92,10 +94,10 @@ function DeleteSoldier() {
                           {elem.address}
                       </td>
                       <td className="details-table-data">
-                          {elem.Salary}
+                          {elem.salary}
                       </td>
                       <td className="details-table-data">
-                        <button onClick={() => { setid(elem.soldier_id); deletedata();}}>Delete</button>
+                        <button className="deletebutton" onClick={() => { deletedata(elem.soldier_id);}}>Delete</button>
                       </td>
                       
                     </tr>
