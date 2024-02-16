@@ -7,6 +7,8 @@ function SoldierDetails() {
   let [Soldierdata , setsoldierdata] = useState([])
 
   useEffect(() => {
+
+    
     try {
       fetch('http://localhost:3000/soldierdetails', { method: "POST" })
       .then((res) => res.json())

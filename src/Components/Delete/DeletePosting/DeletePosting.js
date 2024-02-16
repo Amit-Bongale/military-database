@@ -9,7 +9,7 @@ function DeletePosting() {
 
   useEffect(() => {
     try {
-      fetch('http://localhost:3000/deletedetails', { method: "POST" })
+      fetch('http://localhost:3000/postingdetails', { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         console.log('Fetched data:', data);
@@ -34,7 +34,7 @@ function DeletePosting() {
     };
 
     try {
-      fetch('http://localhost:3000/deletedetails',
+      fetch('http://localhost:3000/deleteposting',
       { 
         method: "POST" ,
         body:JSON.stringify(bodyData),
