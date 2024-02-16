@@ -5,7 +5,7 @@ import '../Insert.css'
 
 function InsertSoldier() {
 
-  let [soldierid, setsoldierid] = useState("");
+  let [soldier_id, setsoldier_id] = useState("");
   let [name , setname] = useState("");
   let [ dob , setdob] = useState("");
   let [gender , setgender] = useState("");
@@ -16,12 +16,18 @@ function InsertSoldier() {
   function send(){
 
     let data = {
-      'soldier_id' : soldierid,
+      'soldier_id' : soldier_id,
       'name' : name,
       'dob' : dob,
+<<<<<<< HEAD
       'gender':gender,
       'address':address,
       'Salary':salary
+=======
+      'gender': gender,
+      'address': address,
+      'salary': salary
+>>>>>>> 4893ff84dafd66897812167de8812b71aa2221a8
     }
 
 
@@ -55,7 +61,7 @@ function InsertSoldier() {
               </td>
               <td className="input-row">
                 <input  className="insert-input" type="text" required
-                onChange={(val) => {setsoldierid(val.target.value)}} />
+                onChange={(val) => {setsoldier_id(val.target.value)}} />
               </td>
             </tr>
 

@@ -63,7 +63,7 @@ function InsertPosting() {
                 <label className="insert-label">Start_Date</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
+                <input className="insert-input" type="date" required
                 onChange={(val) => {setstart_date(val.target.value)}}/>
               </td>
             </tr>
@@ -73,7 +73,7 @@ function InsertPosting() {
                 <label className="insert-label">End_Date</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
+                <input className="insert-input" type="date" required
                 onChange={(val) => {setend_date(val.target.value)}}/>
               </td>
             </tr>
