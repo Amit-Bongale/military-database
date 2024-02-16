@@ -114,4 +114,4 @@ function DeleteSoldier() {
 
 }
 
-export default DeleteSoldier
+export default DeleteSoldier;
