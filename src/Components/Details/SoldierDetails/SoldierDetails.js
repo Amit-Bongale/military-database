@@ -40,33 +40,33 @@ function SoldierDetails() {
                 </tr>
                 
                 {
-                    Soldierdata.map((elem) => (
-                     
-                      <tr className="deatils-table-row">
+                  Soldierdata.map((elem) => (
+                    
+                    <tr className="deatils-table-row">
 
-                        <td className="details-table-data">
-                            {elem.soldier_id} 
-                        </td>
-                        <td className="details-table-data">
-                            {elem.name}
-                        </td>
-                        <td className="details-table-data">
-                            {elem.dob}
-                        </td>
-                        <td className="details-table-data">
-                            {elem.gender}
-                        </td>
+                      <td className="details-table-data">
+                          {elem.soldier_id} 
+                      </td>
+                      <td className="details-table-data">
+                          {elem.name}
+                      </td>
+                      <td className="details-table-data">
+                          {elem.dob.slice(0,10)}
+                      </td>
+                      <td className="details-table-data">
+                          {elem.gender}
+                      </td>
 
-                        <td className="details-table-data">
-                            {elem.address}
-                        </td>
-                        <td className="details-table-data">
-                            {elem.Salary}
-                        </td>
-                        
-                      </tr>
-                     
-                    ))
+                      <td className="details-table-data">
+                          {elem.address}
+                      </td>
+                      <td className="details-table-data">
+                          {elem.Salary}
+                      </td>
+                      
+                    </tr>
+                    
+                  ))
                 }
                 
             </table>

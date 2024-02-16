@@ -21,7 +21,7 @@ function InsertSoldier() {
       'dob' : dob,
       'gender':gender,
       'address':address,
-      'salary':salary
+      'Salary':salary
     }
 
 
@@ -74,7 +74,7 @@ function InsertSoldier() {
                 <label className="insert-label">Date of Birth</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
+                <input className="insert-input" type="date" required
                 onChange={(val) => {setdob(val.target.value)}}/>
               </td>
             </tr>

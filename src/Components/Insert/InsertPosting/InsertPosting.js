@@ -15,11 +15,11 @@ function InsertPosting() {
   function send(){
 
     let data = {
-      'post_id' : postid,
-      'start_date' : startdate,
-      'end_date': enddate,
+      'post_id' : post_id,
+      'start_date' : start_date,
+      'end_date': end_date,
       'location': location,
-      'soldier_id' : soldierid,
+      'soldier_id' : soldier_id,
 
     }
 
