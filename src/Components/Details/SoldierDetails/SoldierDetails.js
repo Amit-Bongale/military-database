@@ -77,4 +77,4 @@ function SoldierDetails() {
   )
 }
 
-export default SoldierDetails
+export default SoldierDetails;
