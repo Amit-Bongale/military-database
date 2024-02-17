@@ -93,4 +93,4 @@ function UpdateSoldier() {
   )
 }
 
-export default UpdateSoldier
+export default UpdateSoldier;
