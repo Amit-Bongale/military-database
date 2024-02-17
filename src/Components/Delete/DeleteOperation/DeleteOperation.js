@@ -6,16 +6,16 @@ import '../Delete.css'
 function DeleteOperation() {
   
   
-  let [Soldierdata , setsoldierdata] = useState([])
-  let [deletesoldier , setdeleted] = useState('')
+  let [Operationdata , setOperationdata] = useState([])
+  let [deleteoperation , setdeleted] = useState('')
 
   useEffect(() => {
     try {
-      fetch('http://localhost:3000/soldierdetails', { method: "POST" })
+      fetch('http://localhost:3000/operationdetails', { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         console.log('Fetched data:', data);
-        setsoldierdata(data);
+        setOperationdata(data);
       })
       .catch(error => {
         console.log('Error fetching data:', error);
@@ -24,7 +24,7 @@ function DeleteOperation() {
     catch (error) {
       console.error('Error:', error);
     }
-  },[deletesoldier])
+  },[deleteoperation])
 
   function deletedata(id){
 
@@ -32,11 +32,11 @@ function DeleteOperation() {
     setdeleted(id);
 
     let bodyData = { 
-      "soldier_id":id
+      "operation_id":id
     };
 
     try {
-      fetch('http://localhost:3000/deletesoldier',
+      fetch('http://localhost:3000/deleteoperation',
       { 
         method: "POST" ,
         body:JSON.stringify(bodyData),
@@ -47,7 +47,7 @@ function DeleteOperation() {
         console.log('Error fetching data:', error);
       });
 
-      alert('Soldier Deleted Sucessfully');
+      alert('Operation Deleted Sucessfully');
 
     }
     catch (error) {
@@ -64,42 +64,42 @@ function DeleteOperation() {
             <table className='details-table'>
 
                 <tr>
-                  <th className="details-table-header"> Soldier ID</th>
-                  <th className="details-table-header"> Name</th>
-                  <th className="details-table-header"> Date of birth</th>
-                  <th className="details-table-header"> Gender</th>
-                  <th className="details-table-header"> Address</th>
-                  <th className="details-table-header"> Salary</th>
+                  <th className="details-table-header"> Operation ID</th>
+                  <th className="details-table-header"> Operation Name</th>
+                  <th className="details-table-header"> Outcome </th>
+                  <th className="details-table-header"> Start Date </th>
+                  <th className="details-table-header"> End Date </th>
+                  <th className="details-table-header"> Soldier ID </th>
                   <th className="details-table-header"> </th>
 
                 </tr>
                 
                 {
-                  Soldierdata.map((elem) => (
+                  Operationdata.map((elem) => (
                     
-                    <tr key={elem.soldier_id} className="deatils-table-row">
+                    <tr key={elem.operation_id} className="deatils-table-row">
 
                       <td className="details-table-data">
-                          {elem.soldier_id} 
+                          {elem.operation_id} 
                       </td>
                       <td className="details-table-data">
-                          {elem.name}
+                          {elem.operation_name}
                       </td>
                       <td className="details-table-data">
-                          {elem.dob.slice(0,10)}
+                          {elem.outcome}
                       </td>
                       <td className="details-table-data">
-                          {elem.gender}
+                          {elem.start_date.slice(0,10)}
                       </td>
 
                       <td className="details-table-data">
-                          {elem.address}
+                          {elem.end_date.slice(0,10)}
                       </td>
                       <td className="details-table-data">
-                          {elem.salary}
+                          {elem.soldier_id}
                       </td>
                       <td className="details-table-data">
-                        <button className="deletebutton" onClick={() => { deletedata(elem.soldier_id);}}>Delete</button>
+                        <button className="deletebutton" onClick={() => { deletedata(elem.operation_id);}}>Delete</button>
                       </td>
                       
                     </tr>
@@ -115,4 +115,4 @@ function DeleteOperation() {
   )
 }
 
-export default DeleteOperation
+export default DeleteOperation;
