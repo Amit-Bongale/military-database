@@ -51,7 +51,6 @@ function CustomRouter() {
       <Route path='/updateposting' element={<UpdatePosting></UpdatePosting>}></Route>
       <Route path='/updatesoldier' element={<UpdateSoldier></UpdateSoldier>}></Route>
 
-
       <Route path='/deletedepartment' element={<DeleteDepartment></DeleteDepartment>}></Route>
       <Route path='/deletemedal' element={<DeleteMedals></DeleteMedals>}></Route>
       <Route path='/deleteoperation' element={<DeleteOperation></DeleteOperation>}></Route>
