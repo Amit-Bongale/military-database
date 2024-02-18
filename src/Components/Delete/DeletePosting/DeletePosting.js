@@ -67,6 +67,7 @@ function DeletePosting() {
                   <th className="details-table-header"> End Date</th>
                   <th className="details-table-header"> Soldier_ID</th>
                   <th className="details-table-header"> Location</th>
+                  <th className="details-table-header"> </th>
 
                 </tr>
                 

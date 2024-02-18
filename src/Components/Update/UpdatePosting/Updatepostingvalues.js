@@ -4,14 +4,13 @@ import '../Update.css'
 
 import closeicon from '../../../Assets/Icons/close.png'
 
-function Updatesoldiervalues({id ,  setupdate}) {
+function Updatepostingvalues({id ,  setupdate}) {
 
-    let [soldier_id, setsoldierid] = useState("");
-    let [name , setname] = useState("");
-    let [dob , setdob] = useState("");
-    let [gender , setgender] = useState("");
-    let [address , setaddress] = useState("");
-    let [salary , setsalary] = useState("");
+    let [post_id, setpost_id] = useState("");
+    let [start_date , setstart_date] = useState("");
+    let [end_date , setend_date] = useState("");
+    let [soldier_id , setsoldier_id] = useState("");
+    let [location , setlocation] = useState("");
     // let [newid , setnewid] = useState("")
 
     useEffect(() => {
@@ -19,11 +18,11 @@ function Updatesoldiervalues({id ,  setupdate}) {
       console.log(id)
       
       let bodyData = { 
-        "soldier_id":id
+        "post_id":id
       };
 
       try {
-        fetch('http://localhost:3000/viewsoldiers', 
+        fetch('http://localhost:3000/viewposting', 
         {  method: "POST" , body:JSON.stringify(bodyData), 
           headers: {'Content-Type': 'application/json'}
         })
@@ -31,12 +30,11 @@ function Updatesoldiervalues({id ,  setupdate}) {
         .then((data) => {
           console.log('Fetched data:', data);
 
-          setsoldierid(data[0].soldier_id);
-          setname(data[0].name);
-          setdob(data[0].dob);
-          setgender(data[0].gender);
-          setaddress(data[0].address);
-          setsalary(data[0].salary);
+          setpost_id(data[0].post_id);
+          setstart_date(data[0].start_date);
+          setend_date(data[0].end_date);
+          setsoldier_id(data[0].soldier_id);
+          setlocation(data[0].location);
 
         })
         .catch(error => {
@@ -55,16 +53,16 @@ function Updatesoldiervalues({id ,  setupdate}) {
 
       let data = {
         // 'soldier_id' : soldier_id,
-        'soldier_id' : id,
-        'name' : name,
-        'dob' : dob,
-        'gender':gender,
-        'address':address,
-        'salary':salary,
+        'post_id' : post_id,
+        'start_id' : start_date,
+        'end_date' : end_date,
+        'soldier_id': soldier_id,
+        'location': location,
+    
       }
   
       try{
-        fetch(`http://localhost:3000/updatesoldier` ,
+        fetch(`http://localhost:3000/updateposting` ,
         { method : "POST" ,
           headers:{'Content-Type': 'application/json'} , 
           body:JSON.stringify(data)
@@ -95,7 +93,7 @@ function Updatesoldiervalues({id ,  setupdate}) {
             <tbody>
               <tr>
                 <td className="row">
-                  <label className="insert-label">Soldier_ID : {soldier_id} </label>
+                  <label className="insert-label"> Post_ID : {post_id} </label>
                 </td>
                 <td className="input-row">
                   {/* <input  className="insert-input" type="text" value={soldier_id} 
@@ -105,51 +103,41 @@ function Updatesoldiervalues({id ,  setupdate}) {
 
               <tr>
                 <td>
-                  <label className="insert-label">Name</label>
+                  <label className="insert-label">Start Date</label>
                 </td>
                 <td>
-                  <input className="insert-input" type="text" required value={name}
-                  onChange={(event) => {setname(event.target.value)}}/>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <label className="insert-label">Date of Birth</label>
-                </td>
-                <td>
-                  <input className="insert-input" type="date" required value={dob}
-                  onChange={(event) => { setdob(event.target.value) }}/>
+                  <input className="insert-input" type="date" required value={start_date}
+                  onChange={(event) => {setstart_date(event.target.value)}}/>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <label className="insert-label">Gender</label>
+                  <label className="insert-label">End Date</label>
+                </td>
+                <td>
+                  <input className="insert-input" type="date" required value={end_date}
+                  onChange={(event) => { setend_date(event.target.value) }}/>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label className="insert-label">Soldier_ID</label>
                 </td>
                 <td> 
-                  <input className="insert-input" type="text" required value={gender}
-                  onChange={(event) => { setgender(event.target.value) }}/>
+                  <input className="insert-input" type="text" required value={soldier_id}
+                  onChange={(event) => { setsoldier_id(event.target.value) }}/>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <label className="insert-label">Permanent Address</label>
+                  <label className="insert-label">Location</label>
                 </td>
                 <td>
-                  <input className="insert-input" type="text" required value={address}
-                  onChange={(event) => {setaddress(event.target.value)}}/>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <label className="insert-label">Salary</label>
-                </td>
-                <td>
-                  <input className="insert-input" type="text" required value={salary}
-                  onChange={(event) => { setsalary(event.target.value)}}/>
+                  <input className="insert-input" type="text" required value={location}
+                  onChange={(event) => {setlocation(event.target.value)}}/>
                 </td>
               </tr>
 
@@ -160,8 +148,10 @@ function Updatesoldiervalues({id ,  setupdate}) {
 
         </div>
       </div>
+
+      <div className="card-wrapper"></div>
     </div>
   )
 }
 
-export default Updatesoldiervalues;
+export default Updatepostingvalues;
