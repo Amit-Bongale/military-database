@@ -160,8 +160,6 @@ function Updatesoldiervalues({id ,  setupdate}) {
 
         </div>
       </div>
-
-      <div className="card-wrapper"></div>
     </div>
   )
 }
