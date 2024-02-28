@@ -6,7 +6,7 @@
 
 .details-table {
     border-collapse: collapse;
-    width: 180%;
+    width: min-content;
 }
   
 .details-table-data , .details-table-header {

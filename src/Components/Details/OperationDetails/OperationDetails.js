@@ -73,13 +73,12 @@ function OperationDetails() {
 
           {details.map((elem) => (
             <tr className="deatils-table-row">
-              <td className="details-table-data">{elem.Operation_Id}</td>
-              <td className="details-table-data">{elem.Operation_Name}</td>
-              <td className="details-table-data">{elem.Outcome}</td>
-              <td className="details-table-data">{elem.Start_date}</td>
-
-              <td className="details-table-data">{elem.End_date}</td>
-              <td className="details-table-data">{elem.Solider_Id}</td>
+              <td className="details-table-data">{elem.operation_id}</td>
+              <td className="details-table-data">{elem.operation_name}</td>
+              <td className="details-table-data">{elem.outcome}</td>
+              <td className="details-table-data">{elem.start_date.slice(0, 10)}</td>
+              <td className="details-table-data">{elem.end_date.slice(0, 10)}</td>
+              <td className="details-table-data">{elem.solider_id}</td>
             </tr>
           ))}
         </table>
