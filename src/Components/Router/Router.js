@@ -22,8 +22,7 @@ import DeleteDepartment from '../Delete/DeleteDept/DeleteDepartment';
 import DeleteMedals from '../Delete/DeleteMedals/DeleteMedals';
 import DeleteOperation from '../Delete/DeleteOperation/DeleteOperation';
 import Deleteposting from '../Delete/DeletePosting/DeletePosting';
-import DeleteSoldier from '../Delete/DeleteSoldier/DeleteSoldier'
-
+import DeleteSoldier from '../Delete/DeleteSoldier/DeleteSoldier';
 
 
 function CustomRouter() {

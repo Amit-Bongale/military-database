@@ -1,6 +1,6 @@
 .details-container{
     position: relative;
-    left: 50px;
+    left: 250px;
     padding: 40px 60px;
 }
 
@@ -17,4 +17,14 @@
   
 .deatils-table-row:nth-child(even) {
     background-color:  var(--primary-100)
+}
+
+
+.searchbar{
+    color: black; 
+    margin: 10px 0px 50px 0px;
+    padding: 15px 10px;
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-200);
 }

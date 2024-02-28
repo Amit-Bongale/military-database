@@ -5,7 +5,6 @@ import '../Delete.css'
 
 function DeleteOperation() {
   
-  
   let [Operationdata , setOperationdata] = useState([])
   let [deleteoperation , setdeleted] = useState('')
 

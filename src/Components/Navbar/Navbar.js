@@ -132,6 +132,9 @@ function Navbar(){
               <Link to='/deletemedal'> <button className='nav-button'>Medals</button></Link>
             </div>
           )}
+
+
+          <Link to='/searchsoldier'> <button className='nav-button'>Search</button></Link>
             
         </div>
 
