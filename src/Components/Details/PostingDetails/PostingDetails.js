@@ -75,8 +75,8 @@ function PostingDetails() {
             <tr className="deatils-table-row">
               <td className="details-table-data">{elem.post_id}</td>
               <td className="details-table-data">{elem.soldier_id}</td>
-              <td className="details-table-data">{elem.start_date}</td>
-              <td className="details-table-data">{elem.end_date}</td>
+              <td className="details-table-data">{elem.start_date.slice(0, 10)}</td>
+              <td className="details-table-data">{elem.end_date.slice(0, 10)}</td>
               <td className="details-table-data">{elem.location}</td>
             </tr>
           ))}

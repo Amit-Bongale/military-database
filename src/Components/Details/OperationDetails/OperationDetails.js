@@ -78,7 +78,7 @@ function OperationDetails() {
               <td className="details-table-data">{elem.outcome}</td>
               <td className="details-table-data">{elem.start_date.slice(0, 10)}</td>
               <td className="details-table-data">{elem.end_date.slice(0, 10)}</td>
-              <td className="details-table-data">{elem.solider_id}</td>
+              <td className="details-table-data">{elem.soldier_id}</td>
             </tr>
           ))}
         </table>
