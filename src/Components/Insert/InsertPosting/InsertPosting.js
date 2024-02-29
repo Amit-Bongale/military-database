@@ -9,8 +9,9 @@ function InsertPosting() {
   let [post_id, setpost_id] = useState("");
   let [start_date , setstart_date] = useState("");
   let [end_date , setend_date] = useState("");
-  let [location , setlocation] = useState("");
   let [soldier_id , setsoldier_id] = useState("");
+  let [location , setlocation] = useState("");
+
 
   function send(){
 
@@ -18,8 +19,8 @@ function InsertPosting() {
       'post_id' : post_id,
       'start_date' : start_date,
       'end_date': end_date,
-      'location': location,
       'soldier_id' : soldier_id,
+      'location': location
 
     }
 
@@ -82,6 +83,16 @@ function InsertPosting() {
 
             <tr>
               <td>
+                <label className="insert-label">Soldier_ID</label>
+              </td>
+              <td>
+                <input className="insert-input" type="text" required
+                onChange={(val) => {setsoldier_id(val.target.value)}}/>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
                 <label className="insert-label">Location</label>
               </td>
               <td>
@@ -90,15 +101,6 @@ function InsertPosting() {
               </td>
             </tr>
 
-            <tr>
-              <td>
-                <label className="insert-label">Soldier_ID</label>
-              </td>
-              <td>
-                <input className="insert-input" type="text" required
-                onChange={(val) => {setsoldier_id(val.target.value)}}/>
-              </td>
-            </tr>
 
             <button type="submit" className="insert-button" onClick={send}> submit </button>
 
