@@ -11,7 +11,7 @@ function Updatepostingvalues({id ,  setupdate}) {
     let [end_date , setend_date] = useState("");
     let [soldier_id , setsoldier_id] = useState("");
     let [location , setlocation] = useState("");
-    // let [newid , setnewid] = useState("")
+
 
     useEffect(() => {
 
@@ -22,7 +22,7 @@ function Updatepostingvalues({id ,  setupdate}) {
       };
 
       try {
-        fetch('http://localhost:3000/viewposting', 
+        fetch('http://localhost:3000/viewpostings', 
         {  method: "POST" , body:JSON.stringify(bodyData), 
           headers: {'Content-Type': 'application/json'}
         })
@@ -52,13 +52,11 @@ function Updatepostingvalues({id ,  setupdate}) {
     function update(){
 
       let data = {
-        // 'soldier_id' : soldier_id,
         'post_id' : post_id,
-        'start_id' : start_date,
+        'start_date' : start_date,
         'end_date' : end_date,
         'soldier_id': soldier_id,
-        'location': location,
-    
+        'location': location
       }
   
       try{

@@ -23,7 +23,7 @@ function Updateoperationvalues({id ,  setupdate}) {
       };
 
       try {
-        fetch('http://localhost:3000/viewoperation', 
+        fetch('http://localhost:3000/viewoperations', 
         {  method: "POST" , body:JSON.stringify(bodyData), 
           headers: {'Content-Type': 'application/json'}
         })
@@ -118,7 +118,7 @@ function Updateoperationvalues({id ,  setupdate}) {
                   <label className="insert-label">Outcome</label>
                 </td>
                 <td>
-                  <input className="insert-input" type="date" required value={outcome}
+                  <input className="insert-input" type="text" required value={outcome}
                   onChange={(event) => { setoutcome(event.target.value) }}/>
                 </td>
               </tr>

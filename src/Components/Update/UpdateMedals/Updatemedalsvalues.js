@@ -48,15 +48,13 @@ function Updatemedalsvalues({id ,  setupdate}) {
     function update(){
 
       let data = {
-        // 'soldier_id' : soldier_id,
         'medal_id' : medal_id,
         'medalName' : medalName,
         'soldier_id' : soldier_id,
-        
       }
   
       try{
-        fetch(`http://localhost:3000/updatemedals` ,
+        fetch(`http://localhost:3000/updatemedal` ,
         { method : "POST" ,
           headers:{'Content-Type': 'application/json'} , 
           body:JSON.stringify(data)

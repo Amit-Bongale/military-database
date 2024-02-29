@@ -94,7 +94,7 @@ function Updatedepartmentvalues({id ,  setupdate}) {
                 </td>
                 <td className="input-row">
                   {/* <input  className="insert-input" type="text" value={soldier_id} 
-                  onChange={(val) => {setsoldierid(val.target.value) }} ></input> */}
+                  onChange={(val) => {setdepartment_id(val.target.value) }} ></input> */}
                 </td>
               </tr>
 

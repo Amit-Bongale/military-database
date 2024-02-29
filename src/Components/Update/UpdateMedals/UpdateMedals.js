@@ -12,7 +12,7 @@ function UpdateMedals() {
   useEffect(() => {
     
     try {
-      fetch('http://localhost:3000/medalsdetails', { method: "POST" })
+      fetch('http://localhost:3000/medaldetails', { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         console.log('Fetched data:', data);
