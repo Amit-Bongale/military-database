@@ -81,6 +81,9 @@ function Navbar(){
 
         <div>
 
+        <Link to='/'> <button className='nav-button'>Home</button></Link>
+
+
           <button className='nav-main-button' onClick={() => { handleopendetail(); imgrotate(); }}>Details
           <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation1}deg`}} alt='arrow'></img>
           </button>

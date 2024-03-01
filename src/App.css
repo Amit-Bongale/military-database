@@ -30,13 +30,15 @@
   color: var(--text-100);
 }
 
-.home{
+.router-container{
   display: flex;
   background-color:var(--bg-100);
+  overflow: auto;
 }
 
 .customroutes{
-  margin-left: 20px;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 

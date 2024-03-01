@@ -1,5 +1,7 @@
 import { Routes , Route } from "react-router-dom";
 
+import Home from "../Home/Home";
+
 import SoldierDetails from "../Details/SoldierDetails/SoldierDetails";
 import DepartmentDetails from '../Details/DepartmentDetails/DepartmentDetails';
 import PostingDetails from '../Details/PostingDetails/PostingDetails';
@@ -29,6 +31,8 @@ function CustomRouter() {
   return (
 
     <Routes>
+
+      <Route path="/" element={<Home></Home>}></Route>
 
       <Route path="/deptartmentdetails" element={<DepartmentDetails></DepartmentDetails>}></Route>
       <Route path="/medaldetails" element={<MedalDetails></MedalDetails>}></Route>

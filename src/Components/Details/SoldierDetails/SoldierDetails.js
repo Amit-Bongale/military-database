@@ -25,7 +25,7 @@ function SoldierDetails() {
   // Search Function
   useEffect(() => {
     let data = {
-      soldier: soldier,
+      'soldier': soldier
     };
 
     try {

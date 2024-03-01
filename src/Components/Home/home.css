@@ -1,0 +1,22 @@
+.home-main-container{
+    background-image: url('../../Assets//Images/military-soldier.jpg');
+    background-size: cover;
+    max-width: 100vw;
+    height: 94.6vh;
+    padding: 50px;
+}
+
+
+.home-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+.home-dbname{
+    font-size: 4vw;
+    margin: 25px 0px 25px 0px;
+    
+}

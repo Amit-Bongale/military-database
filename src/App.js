@@ -10,7 +10,7 @@ function App() {
   return (
   
     <BrowserRouter>
-      <div className='home'>
+      <div className='router-container'>
         
         <Navbar></Navbar>
 

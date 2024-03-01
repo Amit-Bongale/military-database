@@ -27,7 +27,6 @@ function DeleteSoldier() {
   function deletedata(id){
 
     console.log(id)
-    setdeleted(id);
 
     let bodyData = { 
       "soldier_id":id
@@ -51,6 +50,8 @@ function DeleteSoldier() {
     catch (error) {
       console.error('Error:', error);
     }
+
+    setdeleted(id);
 
   }
 
