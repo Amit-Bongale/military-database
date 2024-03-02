@@ -27,11 +27,11 @@ function OperationDetails() {
   // Search Function
   useEffect(() => {
     let data = {
-      operation: operation,
+      'operation': operation
     };
 
     try {
-      fetch("http://localhost:3000/searchposting", {
+      fetch("http://localhost:3000/searchoperation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -56,7 +56,7 @@ function OperationDetails() {
       <div className="details-container">
         <input
           type="text"
-          placeholder="Enter soldier_id or Name"
+          placeholder="Enter Operation_id or Name"
           className="searchbar"
           onChange={(val) => setoperationdetails(val.target.value)}
         />

@@ -26,12 +26,13 @@ function MedalDetails() {
 
   // Search Function
   useEffect(() => {
+
     let data = {
-      medals: medals,
+      'medals': medals
     };
 
     try {
-      fetch("http://localhost:3000/searchposting", {
+      fetch("http://localhost:3000/searchmedals", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -56,7 +57,7 @@ function MedalDetails() {
       <div className="details-container">
         <input
           type="text"
-          placeholder="Enter soldier_id or Name"
+          placeholder="Enter Medal_id or Name"
           className="searchbar"
           onChange={(val) => setmedaldetails(val.target.value)}
         />

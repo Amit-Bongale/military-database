@@ -28,7 +28,7 @@ function PostingDetails() {
   // Search Function
   useEffect(() => {
     let data = {
-      posting: posting,
+      'posting': posting,
     };
 
     try {
@@ -57,7 +57,7 @@ function PostingDetails() {
       <div className="details-container">
         <input
           type="text"
-          placeholder="Enter soldier_id or Name"
+          placeholder="Enter Post_id or Name"
           className="searchbar"
           onChange={(val) => setpostingdetails(val.target.value)}
         />

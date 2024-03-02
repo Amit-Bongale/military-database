@@ -28,11 +28,11 @@ function DepartmentDetails() {
   // Search Function
   useEffect(() => {
     let data = {
-      department: department,
+      'department': department,
     };
 
     try {
-      fetch("http://localhost:3000/searchposting", {
+      fetch("http://localhost:3000/searchdepartment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -57,7 +57,7 @@ function DepartmentDetails() {
       <div className="details-container">
         <input
           type="text"
-          placeholder="Enter soldier_id or Name"
+          placeholder="Enter Department_id or Name"
           className="searchbar"
           onChange={(val) => setdepartmentdetails(val.target.value)}
         />
