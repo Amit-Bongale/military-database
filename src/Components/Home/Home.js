@@ -9,6 +9,8 @@ function Home() {
 
   let [search, setsearch] = useState('');
 
+  let [soldiercount , setsoldiercount] = useState([])
+
   // Search Function
   useEffect(() => {
 
@@ -35,11 +37,28 @@ function Home() {
     }
   }, [search]);
 
+  
+  useEffect(() => {
+    try {
+      fetch("http://localhost:3000/countsoldiers", { method: "POST" })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Fetched data count:", data);
+          setsoldiercount(data[0].no_of_soldier);
+        })
+        .catch((error) => {
+          console.log("Error fetching data:", error);
+        });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }, []);
+
   return (
     <div className="home-main-container">
       <div className="home-content-container">
         <div className="home-content">
-            <h1 className="home-dbname">Military Database</h1>
+            <h1 className="home-dbname"> Military Database </h1>
 
             <input
             type="text"
@@ -79,6 +98,37 @@ function Home() {
             </table>
           </div>
         )}
+
+        <div className="home-cards">
+          <div className="data-card">
+            <h2>No of Soldier</h2>
+            <h1> {soldiercount} </h1>
+          </div>
+
+          <div className="data-card">
+            <h2>No of department</h2>
+            <h1> 3 </h1>
+          </div>
+
+          <div className="data-card flex">
+
+            <div className="data-card-details">
+              <h2>operations</h2>
+              <h1> 2</h1>
+            </div>
+
+            {/* <div className="data-card-details">
+              <h2> Status </h2>
+              <h1> sucess</h1>
+            </div>
+     */}
+          </div>
+
+        </div>
+
+        
+
+
       </div>
     </div>
   );

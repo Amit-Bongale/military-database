@@ -1,8 +1,8 @@
 .home-main-container{
-    background-image: url('../../Assets//Images/military-soldier.jpg');
+    /* background-image: url('../../Assets//Images/military-soldier.jpg'); */
     background-size: cover;
-    max-width: 100vw;
-    height: 94.6vh;
+    /* max-width: 100vw; */
+    /* height: 94.6vh; */
     padding: 50px;
 }
 
@@ -18,5 +18,45 @@
 .home-dbname{
     font-size: 4vw;
     margin: 25px 0px 25px 0px;
-    
 }
+
+.home-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.data-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-width: 200px;
+    /* height: 180px; */
+    background-color: rgba(71, 70, 70, 0.39);
+    border-radius: 10px;
+    border: 1px solid var(--accent-100);
+    text-align: center;
+    padding: 10px;
+}
+
+.data-card >h1{
+    font-size: 60px;
+    margin-top: 0;
+}
+
+/* .data-card-details{
+    display: flex;
+    gap: 25px;
+} */
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .data-card-details > h1{
+    font-size: 60px;
+    margin-top: 0;
+    gap: 25px;
+} */
