@@ -28,10 +28,10 @@ function DeleteMedals() {
   function deletedata(id){
 
     console.log(id)
-    setdeleted(id);
+    
 
     let bodyData = { 
-      "medal_id":id
+      'medal_id':id
     };
 
     try {
@@ -53,6 +53,7 @@ function DeleteMedals() {
       console.error('Error:', error);
     }
 
+    setdeleted(id);
   }
 
   return (
@@ -86,7 +87,7 @@ function DeleteMedals() {
                       </td>
                       
                       <td className="details-table-data">
-                        <button className="deletebutton" onClick={() => { deletedata(elem.soldier_id);}}>Delete</button>
+                        <button className="deletebutton" onClick={() => { deletedata(elem.medal_id);}}>Delete</button>
                       </td>
                       
                     </tr>

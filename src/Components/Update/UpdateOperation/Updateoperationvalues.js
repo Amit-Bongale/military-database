@@ -12,6 +12,7 @@ function Updateoperationvalues({id ,  setupdate}) {
     let [start_date , setstart_date] = useState("");
     let [end_date , setend_date] = useState("");
     let [soldier_id , setsoldier_id] = useState("");
+    let [department_id , setdepartment_id] = useState("")
     // let [newid , setnewid] = useState("")
 
     useEffect(() => {
@@ -37,6 +38,7 @@ function Updateoperationvalues({id ,  setupdate}) {
           setstart_date(data[0].start_date);
           setend_date(data[0].end_date);
           setsoldier_id(data[0].soldier_id);
+          setdepartment_id(data[0].department_id);
 
         })
         .catch(error => {
@@ -60,6 +62,7 @@ function Updateoperationvalues({id ,  setupdate}) {
         'outcome' : outcome,
         'start_date': start_date,
         'end_date': end_date,
+        'department_id' : department_id,
         'soldier_id': soldier_id,
       }
   
@@ -150,6 +153,16 @@ function Updateoperationvalues({id ,  setupdate}) {
                 <td>
                   <input className="insert-input" type="text" required value={soldier_id}
                   onChange={(event) => { setsoldier_id(event.target.value)}}/>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label className="insert-label">Department_ID_ID</label>
+                </td>
+                <td>
+                  <input className="insert-input" type="text" required value={soldier_id}
+                  onChange={(event) => { setdepartment_id(event.target.value)}}/>
                 </td>
               </tr>
 

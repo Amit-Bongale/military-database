@@ -69,6 +69,8 @@ function OperationDetails() {
             <th className="details-table-header"> Start_date</th>
             <th className="details-table-header"> End_date</th>
             <th className="details-table-header"> Soldier_ID</th>
+            <th className="details-table-header"> Department_ID</th>
+
           </tr>
 
           {details.map((elem) => (
@@ -79,6 +81,8 @@ function OperationDetails() {
               <td className="details-table-data">{elem.start_date.slice(0, 10)}</td>
               <td className="details-table-data">{elem.end_date.slice(0, 10)}</td>
               <td className="details-table-data">{elem.soldier_id}</td>
+              <td className="details-table-data">{elem.department_id}</td>
+
             </tr>
           ))}
         </table>

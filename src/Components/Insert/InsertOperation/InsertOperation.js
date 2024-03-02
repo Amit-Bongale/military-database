@@ -10,6 +10,7 @@ function InsertOperation() {
   let [outcome , setoutcome] = useState("");
   let [start_date , setstart_date] = useState("");
   let [end_date , setend_date] = useState("");
+  let [department_id , setdepartment_id] = useState("")
   let [soldier_id , setsoldier_id] = useState("");
 
 
@@ -21,6 +22,7 @@ function InsertOperation() {
       'outcome': outcome,
       'start_date': start_date,
       'end_date' : end_date,
+      'department_id' : department_id,
       'soldier_id': soldier_id
 
     }
@@ -109,6 +111,16 @@ function InsertOperation() {
               <td>
                 <input className="insert-input" type="text" required
                 onChange={(val) => {setsoldier_id(val.target.value)}}/>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label className="insert-label">Department_ID</label>
+              </td>
+              <td>
+                <input className="insert-input" type="text" required
+                onChange={(val) => {setdepartment_id(val.target.value)}}/>
               </td>
             </tr>
 
