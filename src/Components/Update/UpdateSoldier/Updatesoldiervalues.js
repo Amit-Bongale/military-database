@@ -6,7 +6,7 @@ import closeicon from '../../../Assets/Icons/close.png'
 
 function Updatesoldiervalues({id ,  setupdate}) {
 
-    let [soldier_id, setsoldierid] = useState("");
+    let [soldier_id, setsoldier_id] = useState("");
     let [name , setname] = useState("");
     let [dob , setdob] = useState("");
     let [gender , setgender] = useState("");
@@ -31,7 +31,7 @@ function Updatesoldiervalues({id ,  setupdate}) {
         .then((data) => {
           console.log('Fetched data:', data);
 
-          setsoldierid(data[0].soldier_id);
+          setsoldier_id(data[0].soldier_id);
           setname(data[0].name);
           setdob(data[0].dob);
           setgender(data[0].gender);
@@ -55,7 +55,8 @@ function Updatesoldiervalues({id ,  setupdate}) {
 
       let data = {
         // 'soldier_id' : soldier_id,
-        'soldier_id' : id,
+        //check soldier_id below??//
+        'soldier_id' : soldier_id,
         'name' : name,
         'dob' : dob,
         'gender':gender,

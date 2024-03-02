@@ -6,8 +6,8 @@ import '../Insert.css'
 function InsertDept() {
   
   let [department_id, setdepartment_id] = useState("");
-  let [department_Name , setdepartment_Name] = useState("");
-  let [department_Location , setdepartment_Location] = useState("");
+  let [department_name , setdepartment_name] = useState("");
+  let [department_location , setdepartment_location] = useState("");
   let [soldier_id , setsoldier_id] = useState("");
 
 
@@ -15,8 +15,8 @@ function InsertDept() {
 
     let data = {
       'department_id' : department_id,
-      'department_Name' : department_Name,
-      'department_Location': department_Location,
+      'department_name' : department_name,
+      'department_location': department_location,
       'soldier_id': soldier_id
 
     }
@@ -62,7 +62,7 @@ function InsertDept() {
               </td>
               <td>
                 <input className="insert-input" type="text" required
-                onChange={(val) => {setdepartment_Name(val.target.value)}}/>
+                onChange={(val) => {setdepartment_name(val.target.value)}}/>
               </td>
             </tr>
 
@@ -72,7 +72,7 @@ function InsertDept() {
               </td>
               <td>
                 <input className="insert-input" type="text" required
-                onChange={(val) => {setdepartment_Location(val.target.value)}}/>
+                onChange={(val) => {setdepartment_location(val.target.value)}}/>
               </td>
             </tr>
 

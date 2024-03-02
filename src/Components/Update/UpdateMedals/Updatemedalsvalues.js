@@ -7,7 +7,7 @@ import closeicon from '../../../Assets/Icons/close.png'
 function Updatemedalsvalues({id ,  setupdate}) {
 
     let [medal_id, setmedal_id] = useState("");
-    let [medalName , setmedalName] = useState("");
+    let [medal_name , setmedal_name] = useState("");
     let [soldier_id , setsoldier_id] = useState("");
     // let [newid , setnewid] = useState("")
 
@@ -29,7 +29,7 @@ function Updatemedalsvalues({id ,  setupdate}) {
           console.log('Fetched data:', data);
 
           setmedal_id(data[0].medal_id);
-          setmedalName(data[0].medalName);
+          setmedal_name(data[0].medal_name);
           setsoldier_id(data[0].soldier_id);
           
         })
@@ -49,7 +49,7 @@ function Updatemedalsvalues({id ,  setupdate}) {
 
       let data = {
         'medal_id' : medal_id,
-        'medalName' : medalName,
+        'medal_name' : medal_name,
         'soldier_id' : soldier_id,
       }
   
@@ -98,8 +98,8 @@ function Updatemedalsvalues({id ,  setupdate}) {
                   <label className="insert-label">Medal Name</label>
                 </td>
                 <td>
-                  <input className="insert-input" type="text" required value={medalName}
-                  onChange={(event) => {setmedalName(event.target.value)}}/>
+                  <input className="insert-input" type="text" required value={medal_name}
+                  onChange={(event) => {setmedal_name(event.target.value)}}/>
                 </td>
               </tr>
 

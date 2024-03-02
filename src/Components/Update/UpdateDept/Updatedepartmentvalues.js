@@ -7,8 +7,8 @@ import closeicon from '../../../Assets/Icons/close.png'
 function Updatedepartmentvalues({id ,  setupdate}) {
 
     let [department_id, setdepartment_id] = useState("");
-    let [department_Name , setdepartment_Name] = useState("");
-    let [department_Location , setdepartment_Location] = useState("");
+    let [department_name , setdepartment_name] = useState("");
+    let [department_location , setdepartment_location] = useState("");
     let [soldier_id , setsoldier_id] = useState("");
     // let [newid , setnewid] = useState("")
 
@@ -30,8 +30,8 @@ function Updatedepartmentvalues({id ,  setupdate}) {
           console.log('Fetched data:', data);
 
           setdepartment_id(data[0].department_id);
-          setdepartment_Name(data[0].department_Name);
-          setdepartment_Location(data[0].department_Location);
+          setdepartment_name(data[0].department_name);
+          setdepartment_location(data[0].department_location);
           setsoldier_id(data[0].soldier_id);
           
         })
@@ -52,8 +52,8 @@ function Updatedepartmentvalues({id ,  setupdate}) {
       let data = {
         // 'soldier_id' : soldier_id,
         'department_id' : department_id,
-        'department_Name' : department_Name,
-        'department_Location' : department_Location,
+        'department_name' : department_name,
+        'department_location' : department_location,
         'soldier_id': soldier_id,
         
       }
@@ -103,8 +103,8 @@ function Updatedepartmentvalues({id ,  setupdate}) {
                   <label className="insert-label">Department Name</label>
                 </td>
                 <td>
-                  <input className="insert-input" type="text" required value={department_Name}
-                  onChange={(event) => {setdepartment_Name(event.target.value)}}/>
+                  <input className="insert-input" type="text" required value={department_name}
+                  onChange={(event) => {setdepartment_name(event.target.value)}}/>
                 </td>
               </tr>
 
@@ -113,8 +113,8 @@ function Updatedepartmentvalues({id ,  setupdate}) {
                   <label className="insert-label">Department Location</label>
                 </td>
                 <td>
-                  <input className="insert-input" type="text" required value={department_Location}
-                  onChange={(event) => { setdepartment_Location(event.target.value) }}/>
+                  <input className="insert-input" type="text" required value={department_location}
+                  onChange={(event) => { setdepartment_location(event.target.value) }}/>
                 </td>
               </tr>
 

@@ -71,7 +71,7 @@ function MedalDetails() {
           {details.map((elem) => (
             <tr className="deatils-table-row">
               <td className="details-table-data">{elem.medal_id}</td>
-              <td className="details-table-data">{elem.medalName}</td>
+              <td className="details-table-data">{elem.medal_name}</td>
               <td className="details-table-data">{elem.soldier_id}</td>
             </tr>
           ))}

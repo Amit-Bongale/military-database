@@ -55,7 +55,7 @@ function UpdateMedals() {
                     {elem.medal_id} 
                 </td>
                 <td className="details-table-data">
-                    {elem.medalName}
+                    {elem.medal_name}
                 </td>
                 <td className="details-table-data">
                     {elem.soldier_id}

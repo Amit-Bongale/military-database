@@ -75,7 +75,6 @@ function SoldierDetails() {
               <td className="details-table-data">{elem.name}</td>
               <td className="details-table-data">{elem.dob.slice(0, 10)}</td>
               <td className="details-table-data">{elem.gender}</td>
-
               <td className="details-table-data">{elem.address}</td>
               <td className="details-table-data">{elem.salary}</td>
             </tr>

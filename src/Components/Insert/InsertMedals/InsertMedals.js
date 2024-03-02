@@ -6,7 +6,7 @@ import '../Insert.css'
 function InsertMedals() {
   
   let [medal_id, setmedal_id] = useState("");
-  let [medalName , setmedalName] = useState("");
+  let [medal_name , setmedal_name] = useState("");
   let [soldier_id , setsoldier_id] = useState("");
 
 
@@ -14,7 +14,7 @@ function InsertMedals() {
 
     let data = {
       'medal_id' : medal_id,
-      'medalName' : medalName,
+      'medal_name' : medal_name,
       'soldier_id': soldier_id
 
     }
@@ -62,7 +62,7 @@ function InsertMedals() {
               </td>
               <td>
                 <input className="insert-input" type="text" required
-                onChange={(val) => {setmedalName(val.target.value)}}/>
+                onChange={(val) => {setmedal_name(val.target.value)}}/>
               </td>
             </tr>
 

@@ -79,10 +79,10 @@ function DeleteDepartment() {
                           {elem.department_id} 
                       </td>
                       <td className="details-table-data">
-                          {elem.department_Name}
+                          {elem.department_name}
                       </td>
                       <td className="details-table-data">
-                          {elem.department_Location}
+                          {elem.department_location}
                       </td>
                       <td className="details-table-data">
                           {elem.soldier_id}

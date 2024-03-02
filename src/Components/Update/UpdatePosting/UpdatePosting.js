@@ -6,7 +6,7 @@ function UpdatePosting() {
   
   let [Postingdata , setPostingdata] = useState([])
   let [update , setupdate] = useState(false)
-  let [postid , setpostid] = useState('')
+  let [post_id , setpost_id] = useState('')
 
   useEffect(() => {
     
@@ -32,7 +32,7 @@ function UpdatePosting() {
     
 
     <div> 
-      {update &&  <Updatepostingvalues id={postid} setupdate={setupdate}></Updatepostingvalues> }
+      {update &&  <Updatepostingvalues id={post_id} setupdate={setupdate}></Updatepostingvalues> }
 
       <div className='details-container'>
         
@@ -71,7 +71,7 @@ function UpdatePosting() {
                 
                 <td className="details-table-data">
                   <button className="deletebutton"
-                  onClick={() => { setpostid(elem.post_id); setupdate(true) }}>
+                  onClick={() => { setpost_id(elem.post_id); setupdate(true) }}>
                     Update</button>
                 </td>
                 

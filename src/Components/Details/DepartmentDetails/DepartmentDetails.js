@@ -73,8 +73,8 @@ function DepartmentDetails() {
           {details.map((elem) => (
             <tr className="deatils-table-row">
               <td className="details-table-data">{elem.department_id}</td>
-              <td className="details-table-data">{elem.department_Name}</td>
-              <td className="details-table-data">{elem.department_Location}</td>
+              <td className="details-table-data">{elem.department_name}</td>
+              <td className="details-table-data">{elem.department_location}</td>
               <td className="details-table-data">{elem.soldier_id}</td>
             </tr>
           ))}

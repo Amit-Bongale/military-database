@@ -6,7 +6,7 @@ function UpdateSoldier() {
   
   let [Soldierdata , setsoldierdata] = useState([])
   let [update , setupdate] = useState(false)
-  let [soldierid , setsoldierid] = useState('')
+  let [soldier_id , setsoldier_id] = useState('')
 
   useEffect(() => {
     
@@ -32,7 +32,7 @@ function UpdateSoldier() {
     
 
     <div> 
-      {update &&  <Updatesoldiervalues id={soldierid} setupdate={setupdate}></Updatesoldiervalues> }
+      {update &&  <Updatesoldiervalues id={soldier_id} setupdate={setupdate}></Updatesoldiervalues> }
 
       <div className='details-container'>
         
@@ -74,7 +74,7 @@ function UpdateSoldier() {
                 </td>
                 <td className="details-table-data">
                   <button className="deletebutton"
-                  onClick={() => { setsoldierid(elem.soldier_id); setupdate(true) }}>
+                  onClick={() => { setsoldier_id(elem.soldier_id); setupdate(true) }}>
                     Update</button>
                 </td>
                 
