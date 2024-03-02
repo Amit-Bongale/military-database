@@ -86,7 +86,7 @@ function Home() {
               {data.map((elem) => (
                 <tr className="deatils-table-row">
                   <td className="details-table-data">{elem.soldier_id}</td>
-                  <td className="details-table-data">{elem.name}</td>
+                  <td className="details-table-data">{elem.soldier_name}</td>
                   <td className="details-table-data">{elem.department_id}</td>
                   <td className="details-table-data">{elem.department_name}</td>
                   <td className="details-table-data">{elem.operation_name}</td>
@@ -106,22 +106,27 @@ function Home() {
           </div>
 
           <div className="data-card">
-            <h2>No of department</h2>
+            <h2>No of Department</h2>
             <h1> 3 </h1>
           </div>
 
-          <div className="data-card flex">
+          <div className="data-card ">
+            <div className="card-flex">
+              <div>
+                <h2>Operations</h2>
+                <h1 className="card-main-data"> 4</h1>
+              </div>
 
-            <div className="data-card-details">
-              <h2>operations</h2>
-              <h1> 2</h1>
-            </div>
+              <div>
+                <h2> Sucess </h2>
+                <h1 className="card-main-data"> 3</h1>
+              </div>
 
-            {/* <div className="data-card-details">
-              <h2> Status </h2>
-              <h1> sucess</h1>
+              <div>
+                <h2> Failure </h2>
+                <h1 className="card-main-data"> 1</h1>
+              </div>
             </div>
-     */}
           </div>
 
         </div>

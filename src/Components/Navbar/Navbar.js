@@ -2,6 +2,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
+import home from  '../../Assets/Icons/home.png'
 import arrow from '../../Assets/Icons/downward-arrow (1).png'
 
 function Navbar(){
@@ -81,7 +82,7 @@ function Navbar(){
 
         <div>
 
-        <Link to='/'> <button className='nav-button'>Home</button></Link>
+        <Link to='/'> <button className='nav-main-button'>Home <img src={home} alt="homeicon" height={20} style={{paddingLeft:'20px'}} /></button></Link>
 
 
           <button className='nav-main-button' onClick={() => { handleopendetail(); imgrotate(); }}>Details
@@ -98,7 +99,7 @@ function Navbar(){
           )}
           
           <button className='nav-main-button' onClick={() => { handleopeninsert(); imgrotate2(); }}> Insert 
-          <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation2}deg`}} alt='arrow'></img>
+          <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation2}deg` ,paddingLeft:'40px' }} alt='arrow'></img>
           </button>
           { IsdropdownOpeninsert && (
             <div className='nav-subbutton-container' >
@@ -124,7 +125,7 @@ function Navbar(){
           )}
 
           <button className='nav-main-button' onClick={() => { handleopendelete(); imgrotate4(); }}>Delete 
-          <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation4}deg`}} alt='arrow'></img>
+          <img id='arrow-btn' src={arrow} height={20}  style={{rotate:`${rotation4}deg` , paddingLeft:'32px'}} alt='arrow'></img>
           </button>
           { IsdropdownOpendelete && (
             <div className='nav-subbutton-container' >
