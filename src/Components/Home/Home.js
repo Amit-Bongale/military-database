@@ -9,7 +9,13 @@ function Home() {
 
   let [search, setsearch] = useState('');
 
-  let [soldiercount , setsoldiercount] = useState([])
+  let [soldiercount , setsoldiercount] = useState('')
+  let [departmentcount , setdepartmentcount] = useState('');
+
+  let [no_of_operation , set_no_of_operation] = useState('');
+  let [sucess , setsucess] = useState('');
+  let [failure , setfailure] = useState('');
+  let [inprogress , set_in_progress] = useState('');
 
   // Search Function
   useEffect(() => {
@@ -45,6 +51,44 @@ function Home() {
         .then((data) => {
           console.log("Fetched data count:", data);
           setsoldiercount(data[0].no_of_soldier);
+        })
+        .catch((error) => {
+          console.log("Error fetching data:", error);
+        });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }, []);
+
+
+  
+  useEffect(() => {
+    try {
+      fetch("http://localhost:3000/countdepartments", { method: "POST" })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Fetched data count:", data);
+          setdepartmentcount(data[0].no_of_departments);
+        })
+        .catch((error) => {
+          console.log("Error fetching data:", error);
+        });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }, []);
+
+  
+  useEffect(() => {
+    try {
+      fetch("http://localhost:3000/operationsummary", { method: "POST" })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Fetched data count:", data);
+          set_no_of_operation(data[0].total_operations);
+          setsucess(data[0].successful_operations);
+          setfailure(data[0].failed_operations);
+          set_in_progress(data[0].in_progress_operations);
         })
         .catch((error) => {
           console.log("Error fetching data:", error);
@@ -107,24 +151,29 @@ function Home() {
 
           <div className="data-card">
             <h2>No of Department</h2>
-            <h1> 3 </h1>
+            <h1> {departmentcount} </h1>
           </div>
 
           <div className="data-card ">
             <div className="card-flex">
               <div>
                 <h2>Operations</h2>
-                <h1 className="card-main-data"> 4</h1>
+                <h1 className="card-main-data"> {no_of_operation} </h1>
               </div>
 
               <div>
                 <h2> Sucess </h2>
-                <h1 className="card-main-data"> 3</h1>
+                <h1 className="card-main-data" style={{color: '#38de78'}}> {sucess} </h1>
               </div>
 
               <div>
                 <h2> Failure </h2>
-                <h1 className="card-main-data"> 1</h1>
+                <h1 className="card-main-data" style={{color : 'red'}}> {failure} </h1>
+              </div>
+
+              <div>
+                <h2> In Progress </h2>
+                <h1 className="card-main-data" style={{color : 'yellow'}} > {inprogress} </h1>
               </div>
             </div>
           </div>

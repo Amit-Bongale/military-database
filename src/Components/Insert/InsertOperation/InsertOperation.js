@@ -24,7 +24,6 @@ function InsertOperation() {
       'end_date' : end_date,
       'department_id' : department_id,
       'soldier_id': soldier_id
-
     }
 
 
@@ -32,15 +31,27 @@ function InsertOperation() {
       fetch(`http://localhost:3000/insertoperation` ,
       { method : "POST" , headers:{'Content-Type': 'application/json'} ,  body:JSON.stringify(data)})
       .then((res) => res.json())
-      .catch((error) => console.log(error));
-      alert('Operation added sucessfully');
+      .then((data) => {
+        if (data.message){
+          console.log(data.message);
+          alert(data.message);
+        }
+        if(data.sqlMessage){
+          console.log(data.sqlMessage); 
+          alert(data.sqlMessage);
+        }
+        console.log(data.results); 
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     }
     catch (error) {
       console.log("error :", error)
     }
 
-    window.location.reload();
+    // window.location.reload();
   }
 
 
@@ -79,8 +90,11 @@ function InsertOperation() {
                 <label className="insert-label">Outcome</label>
               </td>
               <td>
-                <input className="insert-input" type="text" required
-                onChange={(val) => {setoutcome(val.target.value)}}/>
+                <select className="insert-input"  onChange={(val) => {setoutcome(val.target.value)}} >
+                  <option className="insert-input" value="successful" key="" > sucessful </option>
+                  <option className="insert-input" value="failed" key=""> failed </option>
+                  <option className="insert-input" value="in progress" key=""> in progress </option>
+                </select>
               </td>
             </tr>
 

@@ -26,13 +26,23 @@ function InsertDept() {
       fetch(`http://localhost:3000/insertdept` ,
       { method : "POST" , headers:{'Content-Type': 'application/json'} ,  body:JSON.stringify(data)})
       .then((res) => res.json())
+      .then((data) => {
+        if (data.message){
+          console.log(data.message);
+          alert(data.message);
+        }
+        if(data.sqlMessage){
+          console.log(data.sqlMessage); 
+          alert(data.sqlMessage);
+        }
+        console.log(data.results); 
+      })
       .catch((error) => console.log(error));
-      alert('Department added sucessfully');
-
     }
     catch (error) {
       console.log("error :", error)
     }
+
   }
 
 
