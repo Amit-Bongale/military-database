@@ -11,6 +11,7 @@ function InsertSoldier() {
   let [gender , setgender] = useState("");
   let [address , setaddress] = useState("");
   let [salary , setsalary] = useState("");
+  let [department_id , setdepartment_id] = useState("")
 
 
   function send(){
@@ -21,7 +22,8 @@ function InsertSoldier() {
       'dob' : dob,
       'gender':gender,
       'address':address,
-      'salary':salary
+      'salary':salary,
+      'department_id':department_id
     }
 
 
@@ -118,6 +120,16 @@ function InsertSoldier() {
               <td>
                 <input className="insert-input" type="text" required
                 onChange={(val) => {setsalary(val.target.value)}}/>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label className="insert-label">Department_ID</label>
+              </td>
+              <td>
+                <input className="insert-input" type="text" required
+                onChange={(val) => {setdepartment_id(val.target.value)}}/>
               </td>
             </tr>
 

@@ -9,7 +9,7 @@ function Updatedepartmentvalues({id ,  setupdate}) {
     let [department_id, setdepartment_id] = useState("");
     let [department_name , setdepartment_name] = useState("");
     let [department_location , setdepartment_location] = useState("");
-    let [soldier_id , setsoldier_id] = useState("");
+    let [commander_id , setcommander_id] = useState("");
     // let [newid , setnewid] = useState("")
 
     useEffect(() => {
@@ -32,7 +32,7 @@ function Updatedepartmentvalues({id ,  setupdate}) {
           setdepartment_id(data[0].department_id);
           setdepartment_name(data[0].department_name);
           setdepartment_location(data[0].department_location);
-          setsoldier_id(data[0].soldier_id);
+          setcommander_id(data[0].commander_id);
           
         })
         .catch(error => {
@@ -54,7 +54,7 @@ function Updatedepartmentvalues({id ,  setupdate}) {
         'department_id' : department_id,
         'department_name' : department_name,
         'department_location' : department_location,
-        'soldier_id': soldier_id,
+        'Commander_id': commander_id,
         
       }
   
@@ -120,11 +120,11 @@ function Updatedepartmentvalues({id ,  setupdate}) {
 
               <tr>
                 <td>
-                  <label className="insert-label">Soldier_ID</label>
+                  <label className="insert-label">Commander_ID</label>
                 </td>
                 <td> 
-                  <input className="insert-input" type="text" required value={soldier_id}
-                  onChange={(event) => { setsoldier_id(event.target.value) }}/>
+                  <input className="insert-input" type="text" required value={commander_id}
+                  onChange={(event) => { setcommander_id(event.target.value) }}/>
                 </td>
               </tr>
 

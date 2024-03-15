@@ -73,13 +73,22 @@ function Updateoperationvalues({id ,  setupdate}) {
           body:JSON.stringify(data)
         })
         .then((res) => res.json())
+        .then((data) => {
+          if (data.message){
+            console.log(data.message);
+            alert(data.message);
+          }
+          if(data.sqlMessage){
+            console.log(data.sqlMessage); 
+            alert(data.sqlMessage);
+          }
+          console.log(data.results); 
+        })
         .catch((error) => console.log(error));
       }
       catch (error) {
         console.log("error:", error)
       }
-
-      alert('updated sucessfully')
 
       window.location.reload();
 

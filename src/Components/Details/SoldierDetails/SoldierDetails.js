@@ -67,6 +67,7 @@ function SoldierDetails() {
             <th className="details-table-header"> Gender</th>
             <th className="details-table-header"> Address</th>
             <th className="details-table-header"> Salary</th>
+            <th className="details-table-header"> Department_ID</th>
           </tr>
 
           {details.map((elem) => (
@@ -77,6 +78,8 @@ function SoldierDetails() {
               <td className="details-table-data">{elem.gender}</td>
               <td className="details-table-data">{elem.address}</td>
               <td className="details-table-data">{elem.salary}</td>
+              <td className="details-table-data">{elem.department_id}</td>
+
             </tr>
           ))}
         </table>

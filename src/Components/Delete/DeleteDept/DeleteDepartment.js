@@ -65,7 +65,7 @@ function DeleteDepartment() {
                   <th className="details-table-header"> Department ID</th>
                   <th className="details-table-header"> Department Name</th>
                   <th className="details-table-header"> Department Location</th>
-                  <th className="details-table-header"> Soldier ID</th>
+                  <th className="details-table-header"> Commander ID</th>
                   <th className="details-table-header"> </th>
 
                 </tr>
@@ -85,7 +85,7 @@ function DeleteDepartment() {
                           {elem.department_location}
                       </td>
                       <td className="details-table-data">
-                          {elem.soldier_id}
+                          {elem.commander_id}
                       </td>
 
                       <td className="details-table-data">

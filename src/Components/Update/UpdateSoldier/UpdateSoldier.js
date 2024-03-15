@@ -45,6 +45,7 @@ function UpdateSoldier() {
             <th className="details-table-header"> Gender</th>
             <th className="details-table-header"> Address</th>
             <th className="details-table-header"> Salary</th>
+            <th className="details-table-header"> Department_ID</th>
             <th className="details-table-header"> </th>
           </tr>
           
@@ -71,6 +72,9 @@ function UpdateSoldier() {
                 </td>
                 <td className="details-table-data">
                     {elem.salary}
+                </td>
+                <td className="details-table-data">
+                    {elem.department_id}
                 </td>
                 <td className="details-table-data">
                   <button className="deletebutton"

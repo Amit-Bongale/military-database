@@ -88,7 +88,7 @@ function InsertDept() {
 
             <tr>
               <td>
-                <label className="insert-label">Soldier_ID</label>
+                <label className="insert-label">Commander_ID</label>
               </td>
               <td>
                 <input className="insert-input" type="text" required

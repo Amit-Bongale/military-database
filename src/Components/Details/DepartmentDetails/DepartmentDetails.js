@@ -67,7 +67,7 @@ function DepartmentDetails() {
             <th className="details-table-header"> Department_ID</th>
             <th className="details-table-header"> Department_Name</th>
             <th className="details-table-header"> Department_Location</th>
-            <th className="details-table-header"> Soldier_ID</th>
+            <th className="details-table-header"> Commander_ID</th>
           </tr>
 
           {details.map((elem) => (
