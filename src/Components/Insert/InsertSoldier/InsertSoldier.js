@@ -36,19 +36,20 @@ function InsertSoldier() {
           console.log(data.message);
           alert(data.message);
         }
-        if(data.sqlMessage){
+        else if(data.sqlMessage){
           console.log(data.sqlMessage); 
           alert(data.sqlMessage);
         }
         console.log(data.results); 
       })
       .catch((error) => console.log(error));
-      // alert('Soldier added sucessfully');
 
     }
     catch (error) {
       console.log("error :", error)
     }
+
+    window.location.reload()
 
   }
 

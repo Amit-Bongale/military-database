@@ -75,7 +75,7 @@ function DepartmentDetails() {
               <td className="details-table-data">{elem.department_id}</td>
               <td className="details-table-data">{elem.department_name}</td>
               <td className="details-table-data">{elem.department_location}</td>
-              <td className="details-table-data">{elem.soldier_id}</td>
+              <td className="details-table-data">{elem.commander_id}</td>
             </tr>
           ))}
         </table>

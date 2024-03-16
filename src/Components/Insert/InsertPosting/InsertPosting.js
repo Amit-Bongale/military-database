@@ -49,6 +49,8 @@ function InsertPosting() {
       console.log("error :", error)
     }
 
+    window.location.reload()
+
   }
 
 

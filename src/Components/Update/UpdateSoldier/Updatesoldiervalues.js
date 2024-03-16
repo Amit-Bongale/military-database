@@ -56,14 +56,13 @@ function Updatesoldiervalues({id ,  setupdate}) {
     function update(){
 
       let data = {
-        // 'soldier_id' : soldier_id,
-        //check soldier_id below??//
         'soldier_id' : soldier_id,
         'name' : name,
         'dob' : dob,
         'gender':gender,
         'address':address,
         'salary':salary,
+        'department_id':department_id
       }
   
       try{
@@ -73,13 +72,26 @@ function Updatesoldiervalues({id ,  setupdate}) {
           body:JSON.stringify(data)
         })
         .then((res) => res.json())
+        .then((data) => {
+          if (data.message){
+            console.log(data.message);
+            alert(data.message);
+          }
+          else if(data.sqlMessage){
+            console.log(data.sqlMessage); 
+            alert(data.sqlMessage);
+          }
+          console.log(data.results); 
+        })
         .catch((error) => console.log(error));
       }
       catch (error) {
         console.log("error:", error)
       }
 
-      alert('updated sucessfully')
+      if(!data.sqlMessage){
+        alert('updated sucessfully')
+      }
 
       window.location.reload();
 

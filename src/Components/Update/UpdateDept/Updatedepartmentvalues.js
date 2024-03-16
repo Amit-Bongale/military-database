@@ -54,7 +54,7 @@ function Updatedepartmentvalues({id ,  setupdate}) {
         'department_id' : department_id,
         'department_name' : department_name,
         'department_location' : department_location,
-        'Commander_id': commander_id,
+        'commander_id': commander_id,
         
       }
   

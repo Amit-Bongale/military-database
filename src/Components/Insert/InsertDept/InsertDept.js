@@ -8,7 +8,7 @@ function InsertDept() {
   let [department_id, setdepartment_id] = useState("");
   let [department_name , setdepartment_name] = useState("");
   let [department_location , setdepartment_location] = useState("");
-  let [soldier_id , setsoldier_id] = useState("");
+  let [commander_id , setcommander_id] = useState("");
 
 
   function send(){
@@ -17,10 +17,8 @@ function InsertDept() {
       'department_id' : department_id,
       'department_name' : department_name,
       'department_location': department_location,
-      'soldier_id': soldier_id
-
+      'commander_id': commander_id
     }
-
 
     try{
       fetch(`http://localhost:3000/insertdept` ,
@@ -31,7 +29,7 @@ function InsertDept() {
           console.log(data.message);
           alert(data.message);
         }
-        if(data.sqlMessage){
+        else if(data.sqlMessage){
           console.log(data.sqlMessage); 
           alert(data.sqlMessage);
         }
@@ -43,8 +41,9 @@ function InsertDept() {
       console.log("error :", error)
     }
 
-  }
+    window.location.reload()
 
+  }
 
 
   return (
@@ -92,7 +91,7 @@ function InsertDept() {
               </td>
               <td>
                 <input className="insert-input" type="text" required
-                onChange={(val) => {setsoldier_id(val.target.value)}}/>
+                onChange={(val) => {setcommander_id(val.target.value)}}/>
               </td>
             </tr>
 
