@@ -91,6 +91,7 @@ function InsertOperation() {
               </td>
               <td>
                 <select className="insert-input"  onChange={(val) => {setoutcome(val.target.value)}} >
+                  <option className="insert-input" value="" key="" ></option>
                   <option className="insert-input" value="successful" key="" > successful </option>
                   <option className="insert-input" value="failed" key=""> failed </option>
                   <option className="insert-input" value="in progress" key=""> in progress </option>
